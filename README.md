@@ -1,5 +1,11 @@
 # 2018-HITCTF-Solutions
 
+```
+已整理好的题目中: 
+部分题目源码位于本仓库中
+部分题目源码参考下表格中的链接
+```
+
 
 |Name(Source)|Type|Points|WriteUP|Author|
 |:-:|:-:|:-:|:-:|:-:|
