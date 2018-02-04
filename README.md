@@ -30,7 +30,7 @@
 |[keyboard](https://github.com/WangYihang/SniperOJ-WriteUps/tree/master/misc/misc250-keyboard)|MISC|250|Reserved|[@WangYihang](https://github.com/wangyihang)|
 |[attack](https://github.com/WangYihang/SniperOJ-WriteUps/tree/master/misc/misc200-attack)|MISC|200|Reserved|[@WangYihang](https://github.com/wangyihang)|
 |[BaSO4](https://github.com/WangYihang/SniperOJ-WriteUps/tree/master/misc/misc100-baso4)|MISC|100|[WriteUP](https://github.com/WangYihang/SniperOJ-WriteUps/blob/master/misc/misc100-baso4/decode_32_64.py)|[@WangYihang](https://github.com/wangyihang)|
-|[PHPReading](https://github.com/7Hxz233/2018-HITCTF-Challenges/tree/master/web/PHPreadiing)|WEB|50|[WriteUP](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/PHPreadiing/README.md)|[RmanOfCN](https://github.com/Rman0fCN)|
+|[PHPReading](https://github.com/7Hxz233/2018-HITCTF-Challenges/tree/master/web/PHPreading)|WEB|50|[WriteUP](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/PHPreading/README.md)|[RmanOfCN](https://github.com/Rman0fCN)|
 |BabyLeakage|WEB||||
 |[BabyInjection](https://github.com/7Hxz233/2018-HITCTF-Challenges/tree/master/web/BabyInjection)|WEB|200|[WriteUP](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/BabyInjection/BabyQuery%26Injection.md)|lnyas|
 |[小电影](https://github.com/7Hxz233/2018-HITCTF-Challenges/tree/master/web/LittleFilm)|WEB|200|[WriteUP](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/LittleFilm/README.md)|[RmanOfCN](https://github.com/Rman0fCN)|
