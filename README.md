@@ -8,11 +8,11 @@
 |DragonBall|PWN||||
 |nodes|PWN||||
 |babynote|PWN||||
-|Baby Android|Reverse||||
-|网管的麒麟臂|Reverse||||
-|学习资料的密码|Reverse||||
-|滴滴滴|Reverse||||
-|大脑在颤抖|Reverse||||
+|Baby Android|Reverse|50|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#Baby-Android)|[jiawei](https://github.com/Vccxx)|
+|网管的麒麟臂|Reverse|150|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E7%BD%91%E7%AE%A1%E7%9A%84%E9%BA%92%E9%BA%9F%E8%87%82)|[jiawei](https://github.com/Vccxx)|
+|学习资料的密码|Reverse|150|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E7%9A%84%E5%AF%86%E7%A0%81)|[jiawei](https://github.com/Vccxx)|
+|滴滴滴|Reverse|350|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E6%BB%B4%E6%BB%B4%E6%BB%B4)|[jiawei](https://github.com/Vccxx)|
+|大脑在颤抖|Reverse|400|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E5%A4%A7%E8%84%91%E5%9C%A8%E9%A2%A4%E6%8A%96)|[jiawei](https://github.com/Vccxx)|
 |单表代替|CRYPTO||||
 |多表代替|CRYPTO||||
 |网管的小照片|CRYPTO||||
