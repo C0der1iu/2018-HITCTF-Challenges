@@ -1,15 +1,15 @@
 # HITCTF2018 PWN WRITE UP
 目录
 
-[1.stackoverflow](#1)
+[1.stackoverflow](#stackoverflow50)
 
-[2.login](#2)
+[2.login](#login200)
 
-[3.dragonball](#3)
+[3.dragonball](#dragonball200)
 
-[4.nodes](#4)
+[4.nodes](#nodes350)
 
-[5.babynote](#5)
+[5.babynote](#babynote400)
 
 ## <span id="1">stackoverflow(50)</span>
 一个很简单的栈溢出，可以覆盖返回地址设置好参数直接调用预先留好的flag函数，也可以自己设置参数去调用system(“cat flag”)，还可以用read函数把/bin/sh写在某个可写的位置上，然后system(“/bin/sh”)来拿shell。
