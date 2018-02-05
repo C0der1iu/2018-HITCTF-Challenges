@@ -11,7 +11,7 @@
 
 [5.babynote](#5)
 
-## <span id="1">stackoverflow(50)<span>
+## <span id="1">stackoverflow(50)</span>
 一个很简单的栈溢出，可以覆盖返回地址设置好参数直接调用预先留好的flag函数，也可以自己设置参数去调用system(“cat flag”)，还可以用read函数把/bin/sh写在某个可写的位置上，然后system(“/bin/sh”)来拿shell。
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn100_stackoverflow/images/1.png?raw=true)
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn100_stackoverflow/images/2.png?raw=true)
@@ -31,10 +31,14 @@ print io.recvline()
 ## <span id="2">login(200)</span>
 一个登录系统，以root用户成功登录的话程序会直接cat flag，给出的程序里有root的密码，不过显然这个密码和服务器上运行程序的root密码是不一样的，从密码表示的意思也可以看出来。那么该怎么做呢，猜密码吗，显然不是的，这是一道pwn题，尝试寻找程序里的漏洞来获取flag。
 	通过分析程序可以发现，当以root用户尝试登陆时，程序对输入进行了两次的检查，一次是在login函数，一次是在check函数，观察这两个函数，发现它们的检查方式有点区别：
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn200_login_local/images/1.png?raw=true)
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn200_login_local/images/2.png?raw=true)
+
 strncmp是指定长度的字符串比较函数，login的比较长度由read_input_raw返回，而check的比较长度则是固定的，再分析read_input_raw函数：
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn200_login_local/images/3.png?raw=true)
+
 read_input_raw函数返回输入字符的个数，当输入的字符为”\n”时，输入结束，且“\n”不计入字符数，分析到这里，可以发现在login函数里密码校验的长度的可以由我们的输入来指定，虽然不能通过check，但可以通过一字节一字节爆破的方式来得到服务器的密码，脚本如下：
 ```python
 from pwn import*
@@ -66,7 +70,9 @@ print "passwd: " + passwd
 ```
 ## <span id="3">dragonball(200)</span>
 程序初始提供了15元，购买一个DragonBall花费5元，出售一个获得3元，集齐7个DragonBall可以执行许愿函数wish，wish函数存在栈溢出，可以泄露栈地址和覆盖函数的返回地址
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn250_DragonBall/images/1.png?raw=true)
+
 用checksec检查程序，发现nx和canary都关闭了，那么就可以用shellcode来拿shell。那么问题是怎么集齐7龙珠。
 	分析买卖流程，发现购买函数只检查了钱是否为0的情况，而且用于存储钱的变量是一个无符号整数，那么可以通过买卖操作让钱向下溢出而变大，就有足够的钱来买龙珠了。
 ```python
@@ -106,9 +112,13 @@ p.close()
 ```
 ## <span id="4">nodes(350)</span>
 程序实现了一个单链表，可以插入、编辑节点，查看所有节点的内容，节点的结构体如下所示：
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn350_nodes/images/1.png?raw=true)
+
 在生成和编辑节点时，data的输入长度由变量unk_804A080决定，unk_804A080初始为0x30。每完成一次插入，用于统计节点数量的全局变量dword_804A04C会+1，然后程序打印当前节点的数量，打印之前先用sprintf把字符串拷贝到char byte_804A060[32]上。
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn350_nodes/images/2.png?raw=true)
+
 观察char byte_804A060[32]和unk_804A080的位置，发现当节点数量大于等于100时，sprintf拷贝到char byte_804A060[32]会覆盖unk_804A080的值，造成一个bss节上的溢出，unk_804A080的值变大了，再次编辑节点时，就可以通过输入data来覆盖结构体上的next指针，利用edit和list函数来实现任意地址的读写，可以修改puts@got为system，然后在节点的data上输入/bin/sh来获取shell，exp如下：
 ```python
 from pwn import *
@@ -170,6 +180,7 @@ p.interactive()
 ```
 ## <span id="5">babynote(400)</span>
 很常见的菜单程序，提供了添加、编辑、打印和删除note的功能，note的结构体如下所：
+
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn400_babynote/imgaes/1.png?raw=true)
 
 content的大小可以自己定义
