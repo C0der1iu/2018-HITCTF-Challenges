@@ -9,11 +9,11 @@
 
 |Name(Source)|Type|Points|WriteUP|Author|
 |:-:|:-:|:-:|:-:|:-:|
-|stackoverflow|PWN||||
-|login|PWN||||
-|DragonBall|PWN||||
-|nodes|PWN||||
-|babynote|PWN||||
+|stackoverflow|PWN|50|[Writeup](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/HITCTF2018%20PWN%20WRITE%20UP.md#stackoverflow50)|A1Lin.|
+|login|PWN|200|[Writeip](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/HITCTF2018%20PWN%20WRITE%20UP.md#login200)|A1Lin.|
+|DragonBall|PWN|200|[Writeup](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/HITCTF2018%20PWN%20WRITE%20UP.md#dragonball200)|A1Lin.|
+|nodes|PWN|350|[Writeup](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/HITCTF2018%20PWN%20WRITE%20UP.md#nodes350)|A1Lin.|
+|babynote|PWN|400|[Writeup](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/HITCTF2018%20PWN%20WRITE%20UP.md#babynote400)|A1Lin.|
 |[Baby Android](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/reverse/BabyAndroid/source.java)|Reverse|50|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#Baby-Android)|[jiawei](https://github.com/Vccxx)|
 |[网管的麒麟臂](https://github.com/7Hxz233/2018-HITCTF-Challenges/tree/master/reverse/%E7%BD%91%E7%AE%A1%E7%9A%84%E9%BA%92%E9%BA%9F%E8%87%82)|Reverse|150|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E7%BD%91%E7%AE%A1%E7%9A%84%E9%BA%92%E9%BA%9F%E8%87%82)|[jiawei](https://github.com/Vccxx)|
 |[学习资料的密码](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/reverse/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E7%9A%84%E5%AF%86%E7%A0%81/sourceCode.c)|Reverse|150|[Writeup](http://jiangjiawei.pw/blog/2018/02/04/HITCTF2018-RE-wp/#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E7%9A%84%E5%AF%86%E7%A0%81)|[jiawei](https://github.com/Vccxx)|
