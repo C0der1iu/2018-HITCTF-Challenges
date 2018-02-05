@@ -11,7 +11,7 @@
 
 [5.babynote](#5)
 
-##<span id="1"> stackoverflow(50)<span>
+## <span id="1">stackoverflow(50)<span>
 一个很简单的栈溢出，可以覆盖返回地址设置好参数直接调用预先留好的flag函数，也可以自己设置参数去调用system(“cat flag”)，还可以用read函数把/bin/sh写在某个可写的位置上，然后system(“/bin/sh”)来拿shell。
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn100_stackoverflow/images/1.png?raw=true)
 ![](https://github.com/7Hxz233/2018-HITCTF-Challenges/blob/master/pwn/pwn100_stackoverflow/images/2.png?raw=true)
@@ -27,6 +27,7 @@ io.sendline("a" * 0x2c + p32(0x080485df) + p32(0x0804862D) + p32(0xdeadbeef) + p
 print io.recvline()
 print io.recvline()
 ```
+
 ## <span id="2">login(200)</span>
 一个登录系统，以root用户成功登录的话程序会直接cat flag，给出的程序里有root的密码，不过显然这个密码和服务器上运行程序的root密码是不一样的，从密码表示的意思也可以看出来。那么该怎么做呢，猜密码吗，显然不是的，这是一道pwn题，尝试寻找程序里的漏洞来获取flag。
 	通过分析程序可以发现，当以root用户尝试登陆时，程序对输入进行了两次的检查，一次是在login函数，一次是在check函数，观察这两个函数，发现它们的检查方式有点区别：
